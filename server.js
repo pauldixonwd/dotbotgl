@@ -31,10 +31,10 @@ I will respond to the following messages:
 
 
 // response to the user typing "bacon"
-slapp.message('help', ['mention', 'direct_message'], (msg) => {
-  msg.say(`${text}, yummy!`)
-})
-
+slapp
+  .message('^(bacon)$', ['direct_mention', 'direct_message'], (msg, text) => {
+    msg
+.say(`${text}, yummy!`)
 
 
 // response to the user typing "help"
