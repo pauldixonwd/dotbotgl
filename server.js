@@ -102,6 +102,16 @@ slapp.message(/^(bacon)/i, ['mention', 'direct_message'], (msg) => {
   ])
 })
 
+// Can use a regex as well
+slapp.message(/^(what is your favourite food|what is your favorite food)/i, ['mention', 'direct_message'], (msg) => {
+  // You can provide a list of responses, and a random one will be chosen
+  // You can also include slack emoji in your responses
+  msg.say([
+    'I :heart: bacon',
+    'My favourite food is bacon!'
+  ])
+})
+
 // demonstrate returning an attachment...
 slapp.message('attachment', ['mention', 'direct_message'], (msg) => {
   msg.say({
