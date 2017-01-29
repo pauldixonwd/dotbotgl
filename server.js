@@ -97,8 +97,8 @@ slapp.message(/^(bacon)/i, ['mention', 'direct_message'], (msg) => {
   // You can also include slack emoji in your responses
   msg.say([
     "Yummy :smile:",
-    'I :heart:" bacon',
-    ':+1: Of course'
+    'I :heart: bacon',
+    'I had bacon yesterday!'
   ])
 })
 
