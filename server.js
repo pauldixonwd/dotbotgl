@@ -29,19 +29,6 @@ I will respond to the following messages:
 // Setup different handlers for messages
 //*********************************************
 
-
-// response to the user typing "bacon"
-slapp.message(/^(bacon|sausages)/i, ['mention', 'direct_message'], (msg) => {
-  // You can provide a list of responses, and a random one will be chosen
-  // You can also include slack emoji in your responses
-  msg.say([
-    "You're welcome :smile:",
-    'You bet',
-    ':+1: Of course',
-    'Anytime :sun_with_face: :full_moon_with_face:'
-  ])
-})
-
 // response to the user typing "help"
 slapp.message('help', ['mention', 'direct_message'], (msg) => {
   msg.say(HELP_TEXT})
