@@ -35,12 +35,12 @@ slapp
   .message('^(bacon)$', ['direct_mention', 'direct_message'], (msg, text) => {
     msg
 .say(`${text}, yummy!`)
-
+})
 
 // response to the user typing "help"
 slapp.message('help', ['mention', 'direct_message'], (msg) => {
-  msg.say(HELP_TEXT)
-})
+  msg.say(HELP_TEXT})
+
 
 // "Conversation" flow that tracks state - kicks off when user says hi, hello or hey
 slapp
